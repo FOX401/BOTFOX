@@ -1,6 +1,5 @@
 /*
-* 
- UBAH-UBAH INFO!!!
+* JANGAN UBAH-UBAH INFO!!!
 * "JANGAN MODAL NAMA DOANG BRO!!!"
 * SCRIPT BY ARIS187 ID
 * JANGAN MODAL NAMA DOANG BOSQ
@@ -21,7 +20,7 @@ const bulan = arrayBulan[moment().format('MM') - 1]
 const config = {
     A187: '📍BOTFX📍',
     instagram: 'OFF',
-    nomer: 'wa.me/+5521979664189',
+    nomer: 'wa.me/+5563829498',
     aktif: '24 JAM',
     youtube: 'https://youtube.com/channel/UCRaC-6JyCW_iqbW1DbuXVxQ',
     whatsapp: 'https://chat.whatsapp.com/KTlC0MXi3WJChdQeps5flt',
@@ -206,8 +205,8 @@ client.on('message-new', async (m) => {
        case 'twt':
            tweetdl(value)
                .then(data => {
-                    const { tamanho, resultado: link } = data
-                    let hasil = `✄1�71 ￄ 1/77 Sucesso!  clique no link abaixo para baixar o resultado! \ nClique no link abaixo🗡️ \ n \ nTamanho: $ {tamanho} \ n \ nLink: $ {link} `
+                    const { size, hasil: link } = data
+                    let hasil = `✄1�71ￄ1�77 Berhasil! silahkan klik link di bawah untuk mendownload hasilnya!\nKlik link dibawah🗡️\n\nSize: ${size}\n\nLink: ${link}`
                     client.sendMessage(id, '[ESPERE UM POUCO...', MessageType.text)
                     client.sendMessage(id, hasil ,MessageType.text)
                })
@@ -218,7 +217,7 @@ client.on('message-new', async (m) => {
        case 'tiktok':
            tiktokdl(value)
                .then(data => {
-                    const { url, nome, duração, descrição } = data
+                    const { url, nama, durasi, deskripsi } = data
                     let hasil = `✄1�71 ￄ 1/77 Sucesso !!! Clique no link abaixo para baixar os resultados! \nClique no link abaixo🗡️\n\nTítulo: ${deskripsi} \n\nDurasi: ${durasi}\n\nNome: ${nama}\n\nUrl: ${url}`;
                     client.sendMessage(id, hasil, MessageType.text)
                })
@@ -343,7 +342,7 @@ client.on('message-new', async (m) => {
                        })
                    break
                default:
-                   client.sendMessageid, 'repetir com! pict menina / menino \ n \ n Por exemplo :! pict menino',MessageType.text)
+                   client.sendMessage(id, 'ulangi dengan  !pict cewek/cowok\n\nMisal: !pict cowok', MessageType.text)
                    break
            }
            break
@@ -454,8 +453,8 @@ case 'puisi2':
  case 'infogempa':
            infogempa()
                .then(data => {
-                   const { localização, profundidade, coordenadas, magnitude, tempo } = data
-                   let hasil = `* INFORMAÇÕES SOBRE TERREMOTO * \ n \ * Localização *: _ $ {localização} _ \ n * Profundidade *: _ $ {profundidade} _ \ n * Coordenadas *: _ $ {coordenadas} _ \ n * Magnitude *: _ $  {magnitude} _ \ n * Tempo *: _ $ {tempo} _`
+                   const { lokasi, kedalaman, koordinat, magnitude, waktu } = data
+                   let hasil = `*INFO GEMPA* \n\ *Lokasi* : _${lokasi}_ \n *Kedalaman* : _${kedalaman}_ \n *Koordinat* : _${koordinat}_ \n *Magnitude* : _${magnitude}_ \n *Waktu* : _${waktu}_`
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -476,7 +475,7 @@ case 'puisi2':
            kbbi(value)
                .then(data => {
                    const { result } = data
-                   let hasil = `*${value}* de acordo com KBBI ️\n\n  _${result}_ `
+                   let hasil = `*${value}* menurut KBBI ️\n\n  _${result}_ `
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -487,8 +486,8 @@ case 'puisi2':
            case 'zodiak':
  zodiak(value)
                .then(data => {
-                   const {nascimento, aniversário, idade, zodíaco} = dados
-                    let result = `* Nascimento *: _ $ {birth} _ n \ n * Aniversário *: _ $ {birthday} _ \ n * Idade *: _ $ {age} _: \ n * Zodíaco *: _ $ {zodiac  } _ `
+                   const { lahir, ultah, usia, zodiak } = data
+                   let hasil = `*Lahir* : _${lahir}_ n\n *Aniversário* : _${ultah}_ \n *Usia* : _${usia}_:\n *Zodíaco* : _${zodiak}_ `
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -554,7 +553,7 @@ case 'spamgmail':
            covidcountry(value)
                .then(data => {
                    const { country, active, casesPerOneMillion, critical, deathsPerOneMillion, recovered, testPerOneMillion, todayCases, todayDeath, totalCases, totalTest } = data
-                   let hasil = `* País *: _ $ {país} _ \ n \ n * Ativo *: _ $ {ativo} _ \ n * CasesPerOneMillion *: _ $ {casesPerOneMillion} _ \ n * Crítico *: $ {crítico} \ n *  DeathsPerOneMillion *: _ $ {deathPerOneMillion} _ \ n * Recuperado *: _ $ {recovery} _ \ n * TestPerOneMillion *: _ $ {testPerOneMillion} _ \ n * TodayCases *: _ $ {todayCases} _ \ n * TodayDeath:  _ $ {todayDeath} \ n * TotalCases *: _ $ {totalCases} _ \ n * TotalTest *: _ $ {totalTest} _ `
+                   let hasil = `*Negara* : _${country}_ \n\n *Active* : _${active}_ \n *CasesPerOneMillion* : _${casesPerOneMillion}_ \n *Critical* : ${critical}\n *DeathsPerOneMillion* : _${deathsPerOneMillion}_ \n *Recovered* : _${recovered}_ \n *TestPerOneMillion* : _${testPerOneMillion}_ \n *TodayCases* : _${todayCases}_ \n *TodayDeath : _${todayDeath}\n *TotalCases* : _${totalCases}_ \n  *TotalTest* : _${totalTest}_ `
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -586,8 +585,8 @@ case 'gay':
   case 'indohot':
            indohot()
                .then(data => {
-                   const { título, gênero, duração, url } = data
-                   let hasil = `Arrependimento GOBLOK😳*\ n \ n * Título * _ $ {title} _ \ n \ n * Status * _ $ {genre} _ \ n \ n * Duração * _ $ {duração} _ \ n \ n * Link Bosq * _ $ {  url} _ `
+                   const { judul, genre, durasi, url } = data
+                   let hasil = `Arrependimento GOBLOK😳* \n\n *Judul* _${judul}_ \n\n *Status* _${genre}_ \n\n *Durasi* _${durasi}_ \n\n *Link Bosq* _${url}_  `
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -597,8 +596,8 @@ case 'gay':
 case 'filmanime':
            filmanime(value)
                .then(data => {
-                   const { título, avaliação, sinopse, vídeo} = dados
-                    let result = `* Anime Movie $ {value}: * \ n \ n * Title * _ $ {title} _ \ n \ n * Rating * _ $ {rating} _ \ n \ n * Info * _ $ {synopsis  } _ \ n \ n * Link de vídeo * _ $ {video} _ `
+                   const { title, rating, sinopis, video } = data
+                   let hasil = `*Film Anime ${value} :* \n\n *Judul* _${title}_ \n\n *Rating* _${rating}_ \n\n *Info* _${sinopsis}_ \n\n *Link Video* _${video}_  `
                    client.sendMessage(id, hasil, MessageType.txext)
                })
                .catch(err => {
@@ -609,7 +608,7 @@ case 'filmanime':
            resep(value)
                .then(data => {
                    const { title, user,  datePublished, dificulty, times, serving, bahan, tutor } = data
-                   let hasil = `* Título: * $ {title} \ n * Autor: * $ {user} \ n * Lançamento: * $ {datePublished} \ n * Nível: * $ {dificuldade} \ n * Tempo: * $ {times} \  n * Porções: * $ {porções} \ n \ n * Ingredientes: * \ n $ {ingrediente} \ n \ n * Passo a passo: * \ n $ {passo} `
+                   let hasil = `*Judul:* ${title}\n*Penulis:* ${user}\n*Rilis:* ${datePublished}\n*Level:* ${dificulty}\n*Waktu:* ${times}\n*Porsi:* ${servings}\n\n*Bahan-bahan:*\n${ingredient}\n\n*Step-by-step:*\n ${step} `
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -631,7 +630,7 @@ case 'filmanime':
            cektanggal(value)
                .then(data => {
                    const { tanggal, keterangan } = data
-                   let hasil = `De acordo com a data $ {valor} é \ n \ n * Data *: _ $ {data} _ \ n * Descrição *: _ $ {descrição} _`q
+                   let hasil = `Menurut tanggal ${value} adalah\n\n *Tanggal* : _${tanggal}_ \n *Keterangan* : _${keterangan}_  `
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -755,14 +754,14 @@ case 'filmanime':
             client.sendContact(from, '6285722553839@c.us')
             break
       case 'tts':
-            if (args.length === 1) return client.reply(from, 'Enviar comando *! Tts [id, en, jp, ar] [texto] *, por exemplo *! Tts id hello all * ')
+            if (args.length === 1) return client.reply(from, 'Kirim perintah *!tts [id, en, jp, ar] [teks]*, contoh *!tts id halo semua*')
             const ttsId = require('node-gtts')('id')
             const ttsEn = require('node-gtts')('en')
 	    const ttsJp = require('node-gtts')('ja')
             const ttsAr = require('node-gtts')('ar')
             const dataText = body.slice(8)
             if (dataText === '') return client.reply(from, 'Baka?', id)
-            if (dataText.length > 500) return client.reply(from, 'Texto muito longo! ', Id)1
+            if (dataText.length > 500) return client.reply(from, 'Teks terlalu panjang!', id)
             var dataBhs = body.slice(5, 7)
 	        if (dataBhs == 'id') {
                 ttsId.save('./media/tts/resId.mp3', dataText, function () {
@@ -781,14 +780,14 @@ case 'filmanime':
                     client.sendPtt(from, './media/tts/resAr.mp3', id)
                 })
             } else {
-                client.reply(from, 'Insira os dados do idioma: [id] para indonésio, [en] para inglês, [jp] para japonês e [ar] para árabe ', id)
+                client.reply(from, 'Masukkan data bahasa : [id] untuk indonesia, [en] untuk inggris, [jp] untuk jepang, dan [ar] untuk arab', id)
             }
             break     
       case 'stickergif':
             if (isMedia) {
                 if (mimetype === 'video/mp4' && message.duration < 10 || mimetype === 'image/gif' && message.duration < 10) {
                     const mediaData = await decryptMedia(message, uaOverride)
-                    client.reply(from, '[WAIT] Em andamento⏄1�71ￄ1�77 Por favor, espere ± 1 min!', id)
+                    client.reply(from, '[WAIT] Sedang di proses⏄1�71ￄ1�77 silahkan tunggu ± 1 min!', id)
                     const filename = `./media/aswu.${mimetype.split('/')[1]}`
                     await fs.writeFileSync(filename, mediaData)
                     await exec(`gify ${filename} ./media/output.gif --fps=30 --scale=240:240`, async function (error, stdout, stderr) {
@@ -796,7 +795,7 @@ case 'filmanime':
                         await client.sendImageAsSticker(from, `data:image/gif;base64,${gif.toString('base64')}`)
                     })
                 } else (
-                    client.reply(from, '[❗] Envie um vídeo com legenda *!stickerGif* max 10 sec!', id) 
+                    client.reply(from, '[❗] Envie um vídeo com uma legenda *!stickerGif* max 10 sec!', id)
                 )
             }
             break     
