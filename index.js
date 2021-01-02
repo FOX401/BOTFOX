@@ -240,8 +240,8 @@ client.on('message-new', async (m) => {
        case 'sholat':
            jsholat(value)
                .then(data => {
-                   const { Imsyak, Fajr, Dzuhur, Asr, Maghrib, Isha, Dhuha} = dados
-                    deixe resultados = `Momentos de oração em * $ {value} * hoje é \ n \ n⚡Imak: $ {Imsyak} \ n⚡Subuh: $ {Fajr} WIB \ n⚡Dzuhur: $ {Dzuhur} WIB \ n⚡  Asr: $ {Asr} WIB \ n⚡Maghrib: $ {Maghrib} \ n⚡Isya: $ {Isha} WIB \ n⚡Midnight: $ {Dhuha} WIB`
+                   const { Imsyak, Subuh, Dzuhur, Ashar, Maghrib, Isya, Dhuha } = data
+                   let hasil = `Momentos de oração em *${value}* hoje é\n\n⚡Imsak : ${Imsyak}\n⚡Subuh : ${Subuh} WIB\n⚡Dzuhur : ${Dzuhur}WIB\n⚡Asr: ${Ashar} WIB\n⚡Maghrib : ${Maghrib}\n⚡Isya : ${Isya} WIB\n⚡Tengah malam : ${Dhuha} WIB`
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
