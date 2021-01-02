@@ -23,8 +23,8 @@ const config = {
     instagram: 'OFF',
     nomer: 'wa.me/+5521979664189',
     aktif: '24 JAM',
-    youtube: ' OFF
-    whatsapp: 'OFF',
+    youtube: 'https://youtube.com/channel/UCRaC-6JyCW_iqbW1DbuXVxQ',
+    whatsapp: 'https://chat.whatsapp.com/KTlC0MXi3WJChdQeps5flt',
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
 }
